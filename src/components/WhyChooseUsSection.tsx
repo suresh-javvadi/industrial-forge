@@ -1,34 +1,38 @@
-import { Users, Crosshair, Monitor, Clock, ShieldCheck } from "lucide-react";
+import { Clock, Crosshair, Monitor, ShieldCheck, Users } from "lucide-react";
 
 const points = [
-  { icon: Users, title: "Experienced Engineering Team", desc: "Skilled professionals with decades of combined industrial experience." },
-  { icon: Crosshair, title: "High-Precision Manufacturing", desc: "Tight tolerance machining and fabrication with rigorous quality checks." },
-  { icon: Monitor, title: "Modern Equipment", desc: "State-of-the-art CNC machines, welding stations, and testing equipment." },
-  { icon: Clock, title: "On-Time Delivery", desc: "Proven track record of meeting project deadlines without compromising quality." },
-  { icon: ShieldCheck, title: "Safety Standards", desc: "Strict adherence to industrial safety norms and best practices." },
+  { icon: Users, title: "Experienced Shop Team", desc: "Engineers and technicians who understand industrial tolerances, field realities, and production pressure." },
+  { icon: Crosshair, title: "Precision Focus", desc: "Repeatable processes, inspection discipline, and tight control over manufacturing quality." },
+  { icon: Monitor, title: "Modern Equipment", desc: "CNC, fabrication, welding, and support equipment aligned to demanding industrial workloads." },
+  { icon: Clock, title: "Reliable Timelines", desc: "Structured planning and execution that help clients hit shutdown, startup, and delivery windows." },
+  { icon: ShieldCheck, title: "Safety Mindset", desc: "Execution standards built around plant safety, controlled work practices, and accountable supervision." },
 ];
 
 const WhyChooseUsSection = () => {
   return (
-    <section id="why-us" className="py-20 lg:py-28 relative">
+    <section id="why-us" className="section-shell relative py-20 lg:py-28">
       <div className="absolute inset-0 blueprint-grid opacity-30" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <span className="text-xs tracking-widest uppercase text-primary font-semibold">Why Us</span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-3">
-            Why Choose <span className="text-gradient">Sri Satyaritha</span>
-          </h2>
+        <div className="mb-16 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <span className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">Why Choose Us</span>
+            <h2 className="mt-3 text-4xl text-foreground sm:text-5xl lg:text-6xl">
+              Why Industrial Teams
+              <span className="text-gradient"> Trust Our Output</span>
+            </h2>
+          </div>
+          <div className="hazard-stripe h-3 w-full max-w-xs rounded-sm opacity-80" />
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {points.map((point) => (
-            <div key={point.title} className="flex gap-4 card-industrial p-6">
-              <div className="w-12 h-12 shrink-0 rounded-lg bg-primary/10 flex items-center justify-center">
-                <point.icon className="w-6 h-6 text-primary" />
+            <div key={point.title} className="card-industrial flex gap-4 p-6">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-sm border border-primary/20 bg-primary/10">
+                <point.icon className="h-6 w-6 text-primary" />
               </div>
               <div>
-                <h3 className="font-bold text-foreground mb-1">{point.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{point.desc}</p>
+                <h3 className="text-2xl leading-none text-foreground">{point.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{point.desc}</p>
               </div>
             </div>
           ))}

@@ -1,56 +1,65 @@
-import { Cog, Factory, HardHat, Wrench, PenTool } from "lucide-react";
+import { Cog, Factory, HardHat, PenTool, Wrench } from "lucide-react";
 
 const services = [
   {
     icon: Factory,
     title: "Mechanical Fabrication",
-    desc: "Heavy structural fabrication, plate work, and custom metal assemblies for industrial applications using advanced welding and cutting technologies.",
+    desc: "Heavy structures, plate work, and custom assemblies built for high-load industrial environments.",
   },
   {
     icon: Cog,
-    title: "CNC Machining & Precision Manufacturing",
-    desc: "High-precision CNC turning, milling, and grinding services for complex components with tight tolerances and superior surface finishes.",
+    title: "CNC Machining",
+    desc: "Turning, milling, and grinding for tolerance-critical parts that must fit and perform right the first time.",
   },
   {
     icon: HardHat,
-    title: "Industrial Installation & Erection",
-    desc: "On-site installation, alignment, and commissioning of heavy machinery, piping systems, and structural steel for industrial plants.",
+    title: "Plant Installation",
+    desc: "Field erection, alignment, and commissioning executed with shutdown-ready coordination and safety discipline.",
   },
   {
     icon: Wrench,
-    title: "Maintenance & Repair",
-    desc: "Preventive and breakdown maintenance services for industrial equipment, ensuring maximum uptime and operational efficiency.",
+    title: "Maintenance Support",
+    desc: "Preventive and corrective service for machines, lines, and utility systems where uptime matters.",
   },
   {
     icon: PenTool,
-    title: "Custom Engineering Solutions",
-    desc: "End-to-end engineering design and development of custom machinery, tools, and fixtures tailored to specific industrial requirements.",
+    title: "Custom Tooling",
+    desc: "Fixtures, engineered sub-systems, and purpose-built solutions shaped around production realities.",
   },
 ];
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-20 lg:py-28 relative">
+    <section id="services" className="section-shell relative py-20 lg:py-28">
       <div className="absolute inset-0 blueprint-grid opacity-50" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <span className="text-xs tracking-widest uppercase text-primary font-semibold">What We Do</span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-3">
-            Our <span className="text-gradient">Services</span>
-          </h2>
-          <p className="mt-4 text-muted-foreground max-w-2xl mx-auto text-lg">
-            Comprehensive mechanical engineering and manufacturing capabilities to power your industrial projects.
-          </p>
+        <div className="mb-16 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-3xl">
+            <span className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">Capabilities</span>
+            <h2 className="mt-3 text-4xl text-foreground sm:text-5xl lg:text-6xl">
+              Core Shop And
+              <span className="text-gradient"> Site Services</span>
+            </h2>
+          </div>
+          <div className="rounded-sm border border-border bg-card/70 px-4 py-3 text-xs uppercase tracking-[0.28em] text-muted-foreground">
+            Fabricate / Machine / Install / Maintain
+          </div>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((svc) => (
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((svc, index) => (
             <div key={svc.title} className="group card-industrial p-8">
-              <div className="w-14 h-14 rounded-xl bg-primary/10 group-hover:bg-primary/20 flex items-center justify-center mb-6 transition-colors">
-                <svc.icon className="w-7 h-7 text-primary" />
+              <div className="mb-6 flex items-start justify-between">
+                <div className="flex h-14 w-14 items-center justify-center rounded-sm border border-primary/20 bg-primary/10 transition-colors group-hover:bg-primary/15">
+                  <svc.icon className="h-7 w-7 text-primary" />
+                </div>
+                <span className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
+                  0{index + 1}
+                </span>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">{svc.title}</h3>
-              <p className="text-muted-foreground leading-relaxed text-sm">{svc.desc}</p>
+              <h3 className="text-3xl leading-none text-foreground">{svc.title}</h3>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{svc.desc}</p>
+              <div className="mt-6 h-[2px] w-20 bg-primary/40 transition-all duration-300 group-hover:w-full" />
             </div>
           ))}
         </div>
