@@ -10,21 +10,21 @@ const points = [
 
 const WhyChooseUsSection = () => {
   return (
-    <section id="why-us" className="py-20 lg:py-28 bg-card/30 relative">
+    <section id="why-us" className="py-20 lg:py-28 relative">
       <div className="absolute inset-0 blueprint-grid opacity-30" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-xs tracking-widest uppercase text-accent font-semibold">Why Us</span>
+          <span className="text-xs tracking-widest uppercase text-primary font-semibold">Why Us</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-3">
-            Why Choose <span className="text-accent">Sri Satyaritha</span>
+            Why Choose <span className="text-gradient">Sri Satyaritha</span>
           </h2>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {points.map((point) => (
-            <div key={point.title} className="flex gap-4 bg-card border border-border rounded-xl p-6 card-hover">
-              <div className="w-12 h-12 shrink-0 rounded-lg bg-secondary/10 flex items-center justify-center">
-                <point.icon className="w-6 h-6 text-secondary" />
+            <div key={point.title} className="flex gap-4 card-industrial p-6">
+              <div className="w-12 h-12 shrink-0 rounded-lg bg-primary/10 flex items-center justify-center">
+                <point.icon className="w-6 h-6 text-primary" />
               </div>
               <div>
                 <h3 className="font-bold text-foreground mb-1">{point.title}</h3>
