@@ -30,13 +30,13 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-20 lg:py-28 bg-card/30 relative">
-      <div className="absolute inset-0 blueprint-grid opacity-30" />
+    <section id="services" className="py-20 lg:py-28 relative">
+      <div className="absolute inset-0 blueprint-grid opacity-50" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-xs tracking-widest uppercase text-accent font-semibold">What We Do</span>
+          <span className="text-xs tracking-widest uppercase text-primary font-semibold">What We Do</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-3">
-            Our <span className="text-accent">Services</span>
+            Our <span className="text-gradient">Services</span>
           </h2>
           <p className="mt-4 text-muted-foreground max-w-2xl mx-auto text-lg">
             Comprehensive mechanical engineering and manufacturing capabilities to power your industrial projects.
@@ -45,9 +45,9 @@ const ServicesSection = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((svc) => (
-            <div key={svc.title} className="group bg-card border border-border rounded-xl p-8 card-hover hover:border-accent/30 transition-colors">
-              <div className="w-14 h-14 rounded-xl bg-accent/10 group-hover:bg-accent/20 flex items-center justify-center mb-6 transition-colors">
-                <svc.icon className="w-7 h-7 text-accent" />
+            <div key={svc.title} className="group card-industrial p-8">
+              <div className="w-14 h-14 rounded-xl bg-primary/10 group-hover:bg-primary/20 flex items-center justify-center mb-6 transition-colors">
+                <svc.icon className="w-7 h-7 text-primary" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">{svc.title}</h3>
               <p className="text-muted-foreground leading-relaxed text-sm">{svc.desc}</p>
