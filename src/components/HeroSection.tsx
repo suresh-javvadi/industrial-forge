@@ -41,7 +41,7 @@ const HeroSection = () => {
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight tracking-tight mb-6">
           Engineering Excellence.
           <br />
-          <span className="text-gradient">Built on Precision.</span>
+          <span className="text-gradient">Delivered on Time.</span>
         </h1>
 
         {/* Description */}
@@ -78,9 +78,9 @@ const HeroSection = () => {
         {/* Stats */}
         <div className="mt-20 grid grid-cols-3 gap-8 max-w-lg mx-auto">
           {[
-            { value: "15+", label: "Years Experience" },
-            { value: "500+", label: "Projects Delivered" },
-            { value: "100+", label: "Clients Served" },
+            { value: "25+", label: "Years Experience" },
+            { value: "10+", label: "Trusted Clients" },
+            { value: "2", label: "ISO Certifications" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="text-2xl sm:text-3xl font-bold text-gradient">

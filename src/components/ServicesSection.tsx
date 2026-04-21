@@ -1,30 +1,35 @@
-import { Cog, Factory, HardHat, Wrench, PenTool } from "lucide-react";
+import { Cog, Factory, PenTool, Layers, Box, Settings } from "lucide-react";
 
 const services = [
   {
-    icon: Factory,
-    title: "Mechanical Fabrication",
-    desc: "Heavy structural fabrication, plate work, and custom metal assemblies for industrial applications using advanced welding and cutting technologies.",
+    icon: PenTool,
+    title: "Engineering 3D Design & CAD Services",
+    desc: "Advanced 3D modeling, detailed production drawings with GD&T, bill of material generation, assembly tagging, and CAD conversion from paper/PDF/AutoCAD to full 3D models.",
   },
   {
     icon: Cog,
-    title: "CNC Machining & Precision Manufacturing",
-    desc: "High-precision CNC turning, milling, and grinding services for complex components with tight tolerances and superior surface finishes.",
+    title: "CNC Precision Component Manufacturing",
+    desc: "High-quality CNC machined components for Defence, Aerospace, Communications, and Robotics. We supply small to medium assemblies with precise tolerances and thorough inspection.",
   },
   {
-    icon: HardHat,
-    title: "Industrial Installation & Erection",
-    desc: "On-site installation, alignment, and commissioning of heavy machinery, piping systems, and structural steel for industrial plants.",
+    icon: Factory,
+    title: "Press Tools Manufacturing",
+    desc: "Custom press tools designed and manufactured for mass production of sheet metal and plastic parts. Specialized in aluminium extrusion press tools for French clients.",
   },
   {
-    icon: Wrench,
-    title: "Maintenance & Repair",
-    desc: "Preventive and breakdown maintenance services for industrial equipment, ensuring maximum uptime and operational efficiency.",
+    icon: Layers,
+    title: "Sheet Metal Component Supply",
+    desc: "Bulk production of high-precision sheet metal parts using custom press tools. We offer competitive rates and consistent quality for repeat orders.",
   },
   {
-    icon: PenTool,
-    title: "Custom Engineering Solutions",
-    desc: "End-to-end engineering design and development of custom machinery, tools, and fixtures tailored to specific industrial requirements.",
+    icon: Settings,
+    title: "Special Purpose Machines (SPMs)",
+    desc: "Design and manufacturing of custom-built machines for specific industrial applications — including pneumatic, hydraulic, and automated SPMs as per customer specifications.",
+  },
+  {
+    icon: Box,
+    title: "Surface Treatment & Finishing",
+    desc: "Heat treatment, hardening, anodising (colour or clear), zinc/nickel/cadmium/chrome plating, and spray booth painting for aluminium and steel components.",
   },
 ];
 
@@ -39,7 +44,7 @@ const ServicesSection = () => {
             Our <span className="text-gradient">Services</span>
           </h2>
           <p className="mt-4 text-muted-foreground max-w-2xl mx-auto text-lg">
-            Comprehensive mechanical engineering and manufacturing capabilities to power your industrial projects.
+            From concept to delivery — design, machining, press tools, and special purpose machines for Defence, Aerospace, and beyond.
           </p>
         </div>
 

@@ -1,10 +1,10 @@
 const projects = [
-  { title: "Steel Plant Fabrication", category: "Fabrication", color: "from-primary/60" },
-  { title: "CNC Precision Components", category: "Machining", color: "from-cyan-glow/60" },
-  { title: "Refinery Piping Installation", category: "Installation", color: "from-primary/40" },
-  { title: "Industrial Conveyor System", category: "Machinery", color: "from-cyan-glow/40" },
-  { title: "Power Plant Maintenance", category: "Maintenance", color: "from-primary/60" },
-  { title: "Custom Tooling & Fixtures", category: "Custom Engineering", color: "from-cyan-glow/60" },
+  { title: "Defence & Radar Sub-Assemblies", category: "Defence", color: "from-primary/60" },
+  { title: "Aerospace Structural Components", category: "Aerospace", color: "from-cyan-glow/60" },
+  { title: "Communication Equipment Parts", category: "Communications", color: "from-primary/40" },
+  { title: "Aluminium Extrusion Press Tools", category: "Press Tools", color: "from-cyan-glow/40" },
+  { title: "Robotics & Automation Parts", category: "Robotics", color: "from-primary/60" },
+  { title: "Marine Communication Components", category: "Marine", color: "from-cyan-glow/60" },
 ];
 
 const ProjectsSection = () => {
@@ -13,12 +13,12 @@ const ProjectsSection = () => {
       <div className="absolute inset-0 circuit-pattern opacity-20" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-xs tracking-widest uppercase text-primary font-semibold">Portfolio</span>
+          <span className="text-xs tracking-widest uppercase text-primary font-semibold">Domains</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-3">
-            Featured <span className="text-gradient">Projects</span>
+            Industries We <span className="text-gradient">Serve</span>
           </h2>
           <p className="mt-4 text-muted-foreground max-w-2xl mx-auto text-lg">
-            A selection of industrial projects showcasing our engineering capabilities.
+            Trusted by leading organisations across Defence, Aerospace, Communications, and more.
           </p>
         </div>
 

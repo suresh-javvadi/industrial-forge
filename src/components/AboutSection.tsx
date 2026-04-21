@@ -3,18 +3,18 @@ import { Target, Lightbulb, Shield } from "lucide-react";
 const cards = [
   {
     icon: Target,
-    title: "Our Vision",
-    text: "To be the most trusted name in mechanical engineering and manufacturing, driving industrial progress through innovation and precision.",
+    title: "Who We Are",
+    text: "Sri Satyaritha Engineers is an Indian proprietorship company specializing in Engineering Design and Precision Component Manufacturing, with a proven track record of on-time delivery and high-quality work.",
   },
   {
     icon: Lightbulb,
-    title: "Our Mission",
-    text: "To deliver world-class fabrication, machining, and engineering services that exceed client expectations in quality, safety, and reliability.",
+    title: "Our Expertise",
+    text: "With 25+ years of experience gained through collaboration with French companies, we specialize in high-precision components, sub-assemblies, press tools, and special purpose machines.",
   },
   {
     icon: Shield,
-    title: "Core Values",
-    text: "Quality without compromise. Safety at every step. Reliability in every project. Innovation in every solution.",
+    title: "Our Commitment",
+    text: "We are committed to customer satisfaction, brand reputation, and IP protection. Every project starts with an NDA to safeguard our clients' intellectual property and business data.",
   },
 ];
 
@@ -29,7 +29,7 @@ const AboutSection = () => {
             Built for <span className="text-gradient">Industrial Excellence</span>
           </h2>
           <p className="mt-4 text-muted-foreground max-w-2xl mx-auto text-lg">
-            Sri Satyaritha Engineers is a leading mechanical engineering and manufacturing company specializing in precision fabrication, CNC machining, and large-scale industrial project execution.
+            Sri Satyaritha Engineers (SSR Engineers) serves industries including Defence, Aerospace, Electronics, Communications, Automobiles, and Robotics — delivering precision parts and designs that meet the highest standards.
           </p>
         </div>
 

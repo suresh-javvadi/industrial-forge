@@ -13,16 +13,22 @@ const Footer = () => {
               <span className="font-bold text-foreground tracking-wide font-[Rajdhani]">Sri Satyaritha Engineers</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Precision mechanical engineering and manufacturing solutions for industrial excellence.
+              ISO 9001:2015 &amp; AS9100D certified manufacturer of precision components, press tools, and special purpose machines. Serving Defence, Aerospace, and Communications since 25+ years.
             </p>
           </div>
 
           <div>
             <h4 className="font-bold text-foreground mb-4 tracking-wide uppercase text-sm">Quick Links</h4>
             <div className="flex flex-col gap-2">
-              {["About", "Services", "Projects", "Contact"].map((link) => (
-                <a key={link} href={`#${link.toLowerCase()}`} className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  {link}
+              {[
+                { label: "About", href: "#about" },
+                { label: "Services", href: "#services" },
+                { label: "Domains", href: "#projects" },
+                { label: "Clients", href: "#clients" },
+                { label: "Contact", href: "#contact" },
+              ].map((link) => (
+                <a key={link.label} href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  {link.label}
                 </a>
               ))}
             </div>
@@ -31,9 +37,11 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-foreground mb-4 tracking-wide uppercase text-sm">Contact</h4>
             <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-              <span>+91 98765 43210</span>
-              <span>info@srisatyarithaengineers.com</span>
-              <span>Industrial Area, Hyderabad, India</span>
+              <span>+91 98 66 12 66 95</span>
+              <span>+91 94 94 80 99 39</span>
+              <span>satyasrt@gmail.com</span>
+              <span>satya@ssrprecisionworks.com</span>
+              <span>Hyderabad, Telangana, India</span>
             </div>
           </div>
         </div>

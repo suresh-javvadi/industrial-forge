@@ -43,26 +43,49 @@ const ContactSection = () => {
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-6">Get In Touch</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Ready to start your next industrial project? Reach out to discuss your requirements with our engineering team.
+                Have a machining requirement, design project, or press tool need? Reach out to our team and we'll respond quickly with a solution tailored to your specifications.
               </p>
             </div>
 
             <div className="space-y-5">
-              {[
-                { icon: Phone, label: "Phone", value: "+91 98765 43210" },
-                { icon: Mail, label: "Email", value: "info@srisatyarithaengineers.com" },
-                { icon: MapPin, label: "Address", value: "Industrial Area, Hyderabad, Telangana, India" },
-              ].map((item) => (
-                <div key={item.label} className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                    <item.icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">{item.label}</p>
-                    <p className="text-foreground font-medium">{item.value}</p>
-                  </div>
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                  <Phone className="w-5 h-5 text-primary" />
                 </div>
-              ))}
+                <div>
+                  <p className="text-sm text-muted-foreground">Phone</p>
+                  <p className="text-foreground font-medium">+91 98 66 12 66 95</p>
+                  <p className="text-foreground font-medium">+91 94 94 80 99 39</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                  <Mail className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground">Email</p>
+                  <p className="text-foreground font-medium">satyasrt@gmail.com</p>
+                  <p className="text-foreground font-medium">satya@ssrprecisionworks.com</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                  <MapPin className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground">Admin Office</p>
+                  <p className="text-foreground font-medium">6-2-966/7/9, Hill Colony, Khairatabad,<br />Hyderabad – 500 004, Telangana, India</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                  <MapPin className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground">Works</p>
+                  <p className="text-foreground font-medium">Gowtham Nagar, Balanagar,<br />Hyderabad – 500 011, Telangana, India</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

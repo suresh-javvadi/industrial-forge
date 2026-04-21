@@ -1,11 +1,12 @@
-import { Users, Crosshair, Monitor, Clock, ShieldCheck } from "lucide-react";
+import { Users, Crosshair, Monitor, Clock, ShieldCheck, Lock } from "lucide-react";
 
 const points = [
-  { icon: Users, title: "Experienced Engineering Team", desc: "Skilled professionals with decades of combined industrial experience." },
-  { icon: Crosshair, title: "High-Precision Manufacturing", desc: "Tight tolerance machining and fabrication with rigorous quality checks." },
-  { icon: Monitor, title: "Modern Equipment", desc: "State-of-the-art CNC machines, welding stations, and testing equipment." },
-  { icon: Clock, title: "On-Time Delivery", desc: "Proven track record of meeting project deadlines without compromising quality." },
-  { icon: ShieldCheck, title: "Safety Standards", desc: "Strict adherence to industrial safety norms and best practices." },
+  { icon: Users, title: "25+ Years of Experience", desc: "Led by professionals with 25 years of hands-on experience working with French companies on high-precision components, press tools, and SPMs." },
+  { icon: Crosshair, title: "Cost-Effective Solutions", desc: "We partner with experienced micromachining shops to reduce costs while maintaining the same level of quality — saving you money without cutting corners." },
+  { icon: Monitor, title: "Modern CNC Equipment", desc: "Our workshop has VMC machines (bed sizes up to 1365mm), CNC lathes, fitting section machines, and a Trimos V7 precision measuring instrument." },
+  { icon: Clock, title: "On-Time Delivery", desc: "We have a strong track record of delivering orders on time. Reliable schedules and clear communication are central to how we work." },
+  { icon: ShieldCheck, title: "ISO 9001:2015 & AS9100D Certified", desc: "Independently certified by QRO and UK Certifications for quality management in Defence, Aerospace, and Communications manufacturing." },
+  { icon: Lock, title: "IP Protection & NDA", desc: "We take intellectual property seriously. Every client engagement begins with a Non-Disclosure Agreement to protect your designs and business data." },
 ];
 
 const WhyChooseUsSection = () => {
