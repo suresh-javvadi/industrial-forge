@@ -87,9 +87,12 @@ const ContactSection = () => {
             <div className="space-y-5">
               {/* Phone */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                <a
+                  href="tel:+919866126695"
+                  className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 hover:bg-primary/20 transition-colors"
+                >
                   <Phone className="w-5 h-5 text-primary" />
-                </div>
+                </a>
                 <div>
                   <p className="text-sm text-muted-foreground">{t("contact_phone_label")}</p>
                   <p className="text-foreground font-medium">+91 98 66 12 66 95</p>
@@ -99,9 +102,14 @@ const ContactSection = () => {
 
               {/* Email */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                <a
+                  href="https://mail.google.com/mail/?view=cm&to=satyasrt@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 hover:bg-primary/20 transition-colors"
+                >
                   <Mail className="w-5 h-5 text-primary" />
-                </div>
+                </a>
                 <div>
                   <p className="text-sm text-muted-foreground">{t("contact_email_label")}</p>
                   <p className="text-foreground font-medium">satyasrt@gmail.com</p>
@@ -111,9 +119,14 @@ const ContactSection = () => {
 
               {/* Admin Office */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=6-2-966%2F7%2F9+Hill+Colony+Khairatabad+Hyderabad+Telangana+India"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 hover:bg-primary/20 transition-colors"
+                >
                   <MapPin className="w-5 h-5 text-primary" />
-                </div>
+                </a>
                 <div>
                   <p className="text-sm text-muted-foreground">{t("contact_admin_label")}</p>
                   <p className="text-foreground font-medium">
@@ -126,9 +139,14 @@ const ContactSection = () => {
 
               {/* Works */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Gowtham+Nagar+Balanagar+Hyderabad+500011+Telangana+India"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 hover:bg-primary/20 transition-colors"
+                >
                   <MapPin className="w-5 h-5 text-primary" />
-                </div>
+                </a>
                 <div>
                   <p className="text-sm text-muted-foreground">{t("contact_works_label")}</p>
                   <p className="text-foreground font-medium">
