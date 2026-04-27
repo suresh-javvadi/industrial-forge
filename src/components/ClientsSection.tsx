@@ -1,5 +1,5 @@
-import { Award } from "lucide-react";
-import { useLanguage } from "@/context/LanguageContext";
+import { Award, ExternalLink } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const CLIENTS = [
   "Bharath Electronics Limited (BEL)",
@@ -14,23 +14,56 @@ const CLIENTS = [
   "Smart Rotamach Pvt Ltd.",
 ];
 
-const ClientsSection = () => {
-  const { t } = useLanguage();
+type CertItem = {
+  nameKey: string;
+  detailKey: string;
+  certNo: string;
+  issuer: string;
+  issued: string;
+  expires: string;
+  pdf: string;
+  gradient: string;
+  border: string;
+  iconBg: string;
+  iconColor: string;
+  btnClass: string;
+};
 
-  const certifications = [
-    {
-      name: t("cert1_name"),
-      detail: t("cert1_detail"),
-      cert: "No. 305025112852Q",
-      issuer: "QRO Certification",
-    },
-    {
-      name: t("cert2_name"),
-      detail: t("cert2_detail"),
-      cert: "No. UQ-2025112816",
-      issuer: "UK Certifications",
-    },
-  ];
+const CERTIFICATIONS: CertItem[] = [
+  {
+    nameKey: "cert1_name",
+    detailKey: "cert1_detail",
+    certNo: "305025112852Q",
+    issuer: "QRO Certification",
+    issued: "28 Nov 2025",
+    expires: "27 Nov 2028",
+    pdf: "/iso-9001-2015.pdf",
+    gradient: "bg-gradient-to-br from-blue-500/10 to-cyan-500/5",
+    border: "border-blue-500/30",
+    iconBg: "bg-blue-500/10",
+    iconColor: "text-blue-400",
+    btnClass:
+      "text-blue-400 border-blue-500/30 hover:border-blue-400 hover:bg-blue-500/10 hover:text-blue-300",
+  },
+  {
+    nameKey: "cert2_name",
+    detailKey: "cert2_detail",
+    certNo: "UQ-2025112816",
+    issuer: "UK Certifications",
+    issued: "28 Nov 2025",
+    expires: "27 Nov 2028",
+    pdf: "/as9100d.pdf",
+    gradient: "bg-gradient-to-br from-violet-500/10 to-purple-500/5",
+    border: "border-violet-500/30",
+    iconBg: "bg-violet-500/10",
+    iconColor: "text-violet-400",
+    btnClass:
+      "text-violet-400 border-violet-500/30 hover:border-violet-400 hover:bg-violet-500/10 hover:text-violet-300",
+  },
+];
+
+const ClientsSection = () => {
+  const { t } = useTranslation();
 
   return (
     <section id="clients" className="py-20 lg:py-28 relative gradient-navy">
@@ -50,19 +83,68 @@ const ClientsSection = () => {
         <p className="text-muted-foreground text-sm tracking-widest uppercase text-center mb-6">
           {t("clients_cert_label")}
         </p>
-        <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto mb-16">
-          {certifications.map((cert) => (
-            <div key={cert.name} className="flex gap-4 card-industrial p-6">
-              <div className="w-12 h-12 shrink-0 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Award className="w-6 h-6 text-primary" />
+        <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto mb-16">
+          {CERTIFICATIONS.map((cert) => (
+            <div
+              key={cert.nameKey}
+              className={`card-industrial flex flex-col gap-5 p-6 border ${cert.border} ${cert.gradient}`}
+            >
+              {/* Header */}
+              <div className="flex items-start gap-3">
+                <div
+                  className={`w-12 h-12 shrink-0 rounded-xl flex items-center justify-center ${cert.iconBg}`}
+                >
+                  <Award className={`w-6 h-6 ${cert.iconColor}`} />
+                </div>
+                <div>
+                  <p className="text-xl font-bold text-foreground">{t(cert.nameKey)}</p>
+                  <p className="text-sm text-muted-foreground">{t(cert.detailKey)}</p>
+                </div>
               </div>
-              <div>
-                <p className="text-lg font-bold text-foreground">{cert.name}</p>
-                <p className="text-sm text-muted-foreground">{cert.detail}</p>
-                <p className="text-xs text-primary mt-1">
-                  {cert.cert} · {cert.issuer}
-                </p>
+
+              {/* Details Grid */}
+              <div className="grid grid-cols-2 gap-x-4 gap-y-3 text-sm">
+                <div>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider mb-0.5">
+                    {t("cert_issued_label")}
+                  </p>
+                  <p className="text-foreground font-medium">{cert.issued}</p>
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider mb-0.5">
+                    {t("cert_expires_label")}
+                  </p>
+                  <p className="text-foreground font-medium">{cert.expires}</p>
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider mb-0.5">
+                    {t("cert_number_label")}
+                  </p>
+                  <p className="text-foreground font-medium font-mono text-xs">{cert.certNo}</p>
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider mb-0.5">
+                    {t("cert_issuer_label")}
+                  </p>
+                  <p className="text-foreground font-medium">{cert.issuer}</p>
+                </div>
               </div>
+
+              {/* Scope */}
+              <p className="text-xs text-muted-foreground leading-relaxed border-t border-border pt-4">
+                {t("cert_scope_text")}
+              </p>
+
+              {/* View Certificate */}
+              <a
+                href={cert.pdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`inline-flex items-center gap-2 self-start text-sm font-semibold px-4 py-2 rounded-lg border transition-all duration-200 ${cert.btnClass}`}
+              >
+                <ExternalLink className="w-4 h-4" />
+                {t("cert_view")}
+              </a>
             </div>
           ))}
         </div>

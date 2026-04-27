@@ -1,12 +1,11 @@
 import { Shield, Navigation, Radio, Layers, Cpu, Anchor } from "lucide-react";
-import { useLanguage } from "@/context/LanguageContext";
-import { TranslationKey } from "@/i18n/translations";
+import { useTranslation } from "react-i18next";
 
 type DomainItem = {
   icon: React.ElementType;
-  titleKey: TranslationKey;
-  catKey: TranslationKey;
-  descKey: TranslationKey;
+  titleKey: string;
+  catKey: string;
+  descKey: string;
   accent: string;
 };
 
@@ -56,7 +55,7 @@ const DOMAINS: DomainItem[] = [
 ];
 
 const ProjectsSection = () => {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
 
   return (
     <section id="projects" className="py-20 lg:py-28 relative gradient-navy">

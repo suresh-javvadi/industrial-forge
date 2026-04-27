@@ -1,8 +1,8 @@
 import { Target, Lightbulb, Shield } from "lucide-react";
-import { useLanguage } from "@/context/LanguageContext";
+import { useTranslation } from "react-i18next";
 
 const AboutSection = () => {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
 
   const cards = [
     { icon: Target, titleKey: "about_card1_title" as const, textKey: "about_card1_text" as const },

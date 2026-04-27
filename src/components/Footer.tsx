@@ -1,8 +1,8 @@
 import { Wrench } from "lucide-react";
-import { useLanguage } from "@/context/LanguageContext";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
 
   const quickLinks = [
     { label: t("nav_about"), href: "#about" },

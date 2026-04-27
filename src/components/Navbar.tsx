@@ -7,13 +7,18 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useLanguage } from "@/context/LanguageContext";
-import { LANGUAGES } from "@/i18n/translations";
+import { useTranslation } from "react-i18next";
+import { LANGUAGES } from "@/i18n";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { t, language, setLanguage } = useLanguage();
+  const { t, i18n } = useTranslation();
+
+  // Normalize "en-US" → "en" for the active language indicator
+  const activeLangCode = i18n.language.split("-")[0];
+  const currentLang =
+    LANGUAGES.find((l) => l.code === activeLangCode) ?? LANGUAGES[0];
 
   const navLinks = [
     { label: t("nav_home"), href: "#hero" },
@@ -31,7 +36,10 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const currentLang = LANGUAGES.find((l) => l.code === language)!;
+  const handleLanguageChange = (code: string) => {
+    i18n.changeLanguage(code);
+    setMobileOpen(false);
+  };
 
   return (
     <nav
@@ -88,9 +96,11 @@ const Navbar = () => {
                 {LANGUAGES.map((lang) => (
                   <DropdownMenuItem
                     key={lang.code}
-                    onClick={() => setLanguage(lang.code)}
+                    onClick={() => handleLanguageChange(lang.code)}
                     className={`gap-2 cursor-pointer ${
-                      language === lang.code ? "text-primary font-semibold" : ""
+                      activeLangCode === lang.code
+                        ? "text-primary font-semibold"
+                        : ""
                     }`}
                   >
                     <span>{lang.flag}</span>
@@ -111,6 +121,7 @@ const Navbar = () => {
           <button
             className="lg:hidden text-foreground"
             onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle menu"
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -133,13 +144,13 @@ const Navbar = () => {
             ))}
 
             {/* Mobile Language Selector */}
-            <div className="flex flex-wrap gap-2 pt-2 border-t border-border">
+            <div className="flex flex-wrap gap-2 pt-3 border-t border-border">
               {LANGUAGES.map((lang) => (
                 <button
                   key={lang.code}
-                  onClick={() => setLanguage(lang.code)}
+                  onClick={() => handleLanguageChange(lang.code)}
                   className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm border transition-colors ${
-                    language === lang.code
+                    activeLangCode === lang.code
                       ? "border-primary text-primary font-semibold bg-primary/10"
                       : "border-border text-muted-foreground hover:border-primary/50"
                   }`}

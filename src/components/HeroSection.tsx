@@ -1,9 +1,9 @@
 import { ArrowRight, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useLanguage } from "@/context/LanguageContext";
+import { useTranslation } from "react-i18next";
 
 const HeroSection = () => {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
 
   return (
     <section

@@ -1,11 +1,10 @@
 import { Cog, Factory, PenTool, Layers, Box, Settings } from "lucide-react";
-import { useLanguage } from "@/context/LanguageContext";
-import { TranslationKey } from "@/i18n/translations";
+import { useTranslation } from "react-i18next";
 
 type ServiceItem = {
   icon: React.ElementType;
-  titleKey: TranslationKey;
-  descKey: TranslationKey;
+  titleKey: string;
+  descKey: string;
 };
 
 const SERVICE_ITEMS: ServiceItem[] = [
@@ -18,7 +17,7 @@ const SERVICE_ITEMS: ServiceItem[] = [
 ];
 
 const ServicesSection = () => {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
 
   return (
     <section id="services" className="py-20 lg:py-28 relative">

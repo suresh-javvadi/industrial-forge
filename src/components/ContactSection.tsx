@@ -4,11 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { useLanguage } from "@/context/LanguageContext";
+import { useTranslation } from "react-i18next";
 
 const ContactSection = () => {
   const { toast } = useToast();
-  const { t } = useLanguage();
+  const { t } = useTranslation();
   const [form, setForm] = useState({ name: "", email: "", phone: "", requirement: "" });
 
   const handleSubmit = (e: React.FormEvent) => {

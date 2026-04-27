@@ -1,11 +1,10 @@
 import { Users, Crosshair, Monitor, Clock, ShieldCheck, Lock } from "lucide-react";
-import { useLanguage } from "@/context/LanguageContext";
-import { TranslationKey } from "@/i18n/translations";
+import { useTranslation } from "react-i18next";
 
 type WhyItem = {
   icon: React.ElementType;
-  titleKey: TranslationKey;
-  descKey: TranslationKey;
+  titleKey: string;
+  descKey: string;
 };
 
 const WHY_ITEMS: WhyItem[] = [
@@ -18,7 +17,7 @@ const WHY_ITEMS: WhyItem[] = [
 ];
 
 const WhyChooseUsSection = () => {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
 
   return (
     <section id="why-us" className="py-20 lg:py-28 relative">
