@@ -143,7 +143,7 @@ const ClientsSection = () => {
             {CLIENTS.map((client) => (
               <div
                 key={client}
-                className="px-5 py-2.5 border border-border rounded-lg bg-secondary/50 hover-glow transition-all duration-300"
+                className="px-5 py-2.5 border border-border rounded-lg bg-secondary hover:border-primary/30 hover:bg-secondary/80 transition-all duration-300"
               >
                 <span className="text-muted-foreground font-medium text-sm">{client}</span>
               </div>

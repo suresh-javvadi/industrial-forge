@@ -17,7 +17,7 @@ const HeroSection = () => {
       />
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0" />
 
       {/* Cyan Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_40%,hsl(var(--primary)/0.08),transparent_60%)]" />
@@ -66,8 +66,8 @@ const HeroSection = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-border hover:border-primary/50 text-foreground
-                         hover:bg-secondary font-semibold text-lg px-8 py-6 hover-glow"
+              className="border-primary/50 text-primary hover:bg-primary/10
+                         hover:border-primary font-semibold text-lg px-8 py-6 hover-glow"
             >
               <Eye className="mr-2 w-5 h-5" /> {t("hero_cta_domains")}
             </Button>

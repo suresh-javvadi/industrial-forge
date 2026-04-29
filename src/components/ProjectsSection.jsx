@@ -7,42 +7,42 @@ const DOMAINS = [
     titleKey: "domain1_title",
     catKey: "domain1_cat",
     descKey: "domain1_desc",
-    accent: "bg-blue-500/10 text-blue-400 border-blue-500/20",
+    accent: "bg-primary/10 text-primary border-primary/20",
   },
   {
     icon: Navigation,
     titleKey: "domain2_title",
     catKey: "domain2_cat",
     descKey: "domain2_desc",
-    accent: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
+    accent: "bg-primary/10 text-primary border-primary/20",
   },
   {
     icon: Radio,
     titleKey: "domain3_title",
     catKey: "domain3_cat",
     descKey: "domain3_desc",
-    accent: "bg-violet-500/10 text-violet-400 border-violet-500/20",
+    accent: "bg-primary/10 text-primary border-primary/20",
   },
   {
     icon: Layers,
     titleKey: "domain4_title",
     catKey: "domain4_cat",
     descKey: "domain4_desc",
-    accent: "bg-amber-500/10 text-amber-400 border-amber-500/20",
+    accent: "bg-primary/10 text-primary border-primary/20",
   },
   {
     icon: Cpu,
     titleKey: "domain5_title",
     catKey: "domain5_cat",
     descKey: "domain5_desc",
-    accent: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+    accent: "bg-primary/10 text-primary border-primary/20",
   },
   {
     icon: Anchor,
     titleKey: "domain6_title",
     catKey: "domain6_cat",
     descKey: "domain6_desc",
-    accent: "bg-sky-500/10 text-sky-400 border-sky-500/20",
+    accent: "bg-primary/10 text-primary border-primary/20",
   },
 ];
 
@@ -100,7 +100,7 @@ const ProjectsSection = () => {
 
               {/* Bottom accent line */}
               <div
-                className={`h-0.5 w-12 rounded-full mt-auto opacity-50 group-hover:w-full group-hover:opacity-80 transition-all duration-500 ${domain.accent.includes("blue") ? "bg-blue-400" : domain.accent.includes("cyan") ? "bg-cyan-400" : domain.accent.includes("violet") ? "bg-violet-400" : domain.accent.includes("amber") ? "bg-amber-400" : domain.accent.includes("emerald") ? "bg-emerald-400" : "bg-sky-400"}`}
+                className="h-0.5 w-12 rounded-full mt-auto opacity-50 group-hover:w-full group-hover:opacity-80 transition-all duration-500 bg-primary"
               />
             </div>
           ))}
