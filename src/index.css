@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -36,6 +36,13 @@
 
     --radius: 0.5rem;
 
+    /* Custom tokens */
+    --navy-dark: 222 47% 6%;
+    --navy-medium: 222 47% 11%;
+    --navy-light: 222 35% 18%;
+    --cyan-accent: 199 89% 48%;
+    --cyan-glow: 199 89% 60%;
+
     --sidebar-background: 222 47% 8%;
     --sidebar-foreground: 210 40% 98%;
     --sidebar-primary: 199 89% 48%;
@@ -54,11 +61,16 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Rajdhani', sans-serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Rajdhani", sans-serif;
     letter-spacing: 0.02em;
   }
 
@@ -93,8 +105,9 @@
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(to right, hsl(199, 89%, 48%), hsl(199, 89%, 70%));
+    @apply bg-clip-text text-transparent bg-gradient-to-r
+      from-[hsl(199,89%,48%)]
+      to-[hsl(199,89%,70%)];
   }
 
   .glow-cyan {
@@ -103,10 +116,6 @@
 
   .glow-cyan-sm {
     box-shadow: 0 0 20px hsl(199 89% 48% / 0.1);
-  }
-
-  .glow-cyan-hover:hover {
-    box-shadow: 0 0 30px hsl(199, 89%, 48%, 0.2);
   }
 
   .circuit-pattern {
@@ -135,46 +144,50 @@
   }
 
   .hover-lift {
-    @apply transition-all duration-300;
-  }
-  .hover-lift:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
   }
 
   .hover-glow {
-    @apply transition-all duration-300;
-  }
-  .hover-glow:hover {
-    box-shadow: 0 0 30px hsl(199, 89%, 48%, 0.2);
-  }
-
-  .card-industrial {
-    @apply bg-card border border-border rounded-xl transition-all duration-300;
-  }
-  .card-industrial:hover {
-    border-color: hsl(199, 89%, 48%, 0.3);
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 20px hsl(199, 89%, 48%, 0.08);
+    @apply transition-all duration-300 hover:shadow-[0_0_30px_hsl(199,89%,48%,0.2)];
   }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes marquee {
-  from { transform: translate3d(0, 0, 0); }
-  to { transform: translate3d(calc(-1 * var(--marquee-width)), 0, 0); }
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(calc(-1 * var(--marquee-width)), 0, 0);
+  }
 }

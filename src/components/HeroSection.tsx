@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-12 sm:pt-24 sm:pb-12 lg:pt-28 lg:pb-20"
     >
       {/* Background Image */}
       <div
@@ -17,7 +17,7 @@ const HeroSection = () => {
       />
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 " />
 
       {/* Cyan Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_40%,hsl(var(--primary)/0.08),transparent_60%)]" />
@@ -29,7 +29,7 @@ const HeroSection = () => {
       <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background to-transparent" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center w-full">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/50 mb-8 glow-cyan-sm backdrop-blur-sm">
           <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
